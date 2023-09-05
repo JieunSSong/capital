@@ -1,0 +1,77 @@
+.graph{
+    width: 40%;
+    height: 500px;
+    border: 1px solid black;
+}
+.graph .text_box{
+    margin: 1rem auto;
+    text-align: center;
+}
+.graph .text_box h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.graph .graph_box{border: 1px solid red;}
+
+.graph .graph_box ul{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    height: 80px;
+    padding: 0 20px;
+    margin: auto;
+    /* border-bottom: 1px solid #e1e3e6; */
+}
+
+.graph .graph_box ul li{
+    /* background-color: violet; */
+    /* display: flex;
+    flex-direction: column; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 40px;
+    height: 80px;
+}
+.graph .graph_box ul li strong{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    color: #6e7780;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0;
+}
+.graph .graph_box ul li .bar{
+    background-color: #E10909;
+    width: 100%;
+    /* height: 80%; */
+    /* position: relative; */
+}
+.graph .graph_box ul li span{
+    font-size: 11px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.7s;
+}
+.graph .graph_box ul li span.on{opacity: 1;}
+.graph .graph_box ul li span.first{
+    color: white;
+    top: 39%;
+}
+.graph .graph_box ul li .res{
+    background-color: rgba(255, 237, 188, 0.6);
+    width: 100%;
+    /* height: 20%; */
+}
+.graph .graph_box ul li span.last{
+    color: #E10909;
+    top: 59%;
+}

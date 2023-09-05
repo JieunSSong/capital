@@ -1,0 +1,45 @@
+
+.customer_wrap{width: 75%;}
+.customer_wrap .input{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.customer_wrap .input input{
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  margin-top: 1rem;
+}
+.customer_wrap .input select{
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  margin-top: 1rem;
+}
+.customer_wrap .input.money_input{position: relative;}
+.customer_wrap .input.money_input span{
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+.customer_wrap .input i{display: none;}
+.customer_wrap .input i.error{
+  display: inline-block;
+  color: var(--light-point-color);
+}
+
+.customer_wrap button{
+  width: 200px;
+  height: 65px;
+  border-radius: 5px;
+  background-color: #C6C6C6;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  margin: auto;
+  display: block;
+}
+.customer_wrap button.next{
+background-color: red;
+cursor: pointer;
+}

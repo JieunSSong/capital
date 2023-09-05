@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>금호캐피탈</title>
+  <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- slick css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- slick js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- xeicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="inner header_inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/main_logo.svg" alt="">
+        </a>
+      </div>
+      <div class="mobile_menu"></div>
+      <div class="nav">
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="productMore.html" class="menulist">금융상품</a>
+              <div class="content_wrap">
+                <div class="content"></div>
+              </div>
+            </li>
+            <li>
+              <a href="#none" class="menulist">대출센터</a>
+              <div class="content_wrap">
+                <div class="content"></div>
+              </div>
+            </li>
+            <li>
+              <a href="#none" class="menulist">고객센터 <i class="menu_arrow"></i></a>
+              <div class="content_wrap">
+                <div class="content">
+                  <ul class="sub_menu">
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="#none">FAQ</a></li>
+                    <li><a href="#none">전자민원</a></li>
+                  </ul>
+                 </div>
+              </div>
+            </li>
+            <li>
+              <a href="#none" class="menulist">회사소개 <i class="menu_arrow"></i></a>
+              <div class="content_wrap">
+                <div class="content">
+                  <ul class="sub_menu">
+                    <li><a href="#none">CEO인사말</a></li>
+                    <li><a href="#none">인재채용</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#none" class="menulist">마이페이지 <i class="menu_arrow"></i></a>
+              <div class="content_wrap">
+                <div class="content">
+                  <ul class="sub_menu">
+                    <li><a href="#none">대출현황</a></li>
+                    <li><a href="#none">회원정보관리</a></li>
+                    <li><a href="#none">서류발급</a></li>
+                    <li><a href="#none">제3자 위임등록</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright">
+          <span>&copy; 금호캐피탈</span>
+        </div>
+        <div class="login_bar">
+          <ul>
+            <li><a href="#none">로그인</a></li>
+            <li><a href="#none">회원가입</a></li>
+            <li class="eng"><a href="#none">ENG</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav_bg"></div>
+  <!-- header js -->
+  <script src="js/header.js"></script>
+
+  <!-- 사이드바 -->
+  <div class="side_bar">
+    <div class="side_boxs call_box">
+      <div class="icon_box"></div>
+      <p>전화상담</p>
+    </div>
+    <div class="side_boxs search_box">
+      <div class="icon_box"></div>
+      <p>한도조회</p>
+    </div>
+    <div class="side_boxs document_box">
+      <div class="icon_box"></div>
+      <p>신청현황</p>
+    </div>
+    <div class="side_boxs kakao_box">
+      <div class="icon_box">
+        <i class="xi-kakaotalk"></i>
+      </div>
+      <p>카카오톡</p>
+    </div>
+    <div class="side_boxs top_box">
+      <i class="xi-arrow-up"></i>
+    </div>
+  </div>
+
+  <!-- main -->
+  <main>
+    <div class="main_wrap">
+      <div class="text_box">
+        <h1>
+          쉽고 빠른 대출<br>
+          <span>금호</span>는 가능합니다
+        </h1>
+        <button id="main_btn">대출신청하기</button>
+      </div>
+      <div class="main_visual"></div>
+
+      <!-- 모바일용 -->
+      <div class="m_main_boxs">
+        <div class="boxs_wrap">
+          <div class="box call_box">
+            <div class="img"></div>
+            <span>전화상담</span>
+          </div>
+          <div class="box mon_box">
+            <div class="img"></div>
+            <span>대출신청</span>
+          </div>
+          <div class="box srh_box">
+            <div class="img"></div>
+            <span>한도조회</span>
+          </div>
+          <div class="box doc_box">
+            <div class="img"></div>
+            <span>신청현황</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- modal -->
+  <div class="modal">
+    <div class="modal_wrap">
+      <i class="xi-close-min closeBtn"></i>
+      <div class="modal_inner">
+        <h3>대출신청서</h3>
+        <form>
+          <table>
+            <tr class="name">
+              <th>
+                <label for="name">이름</label>
+              </th>
+              <td>
+                <input type="text" id="name" placeholder="이름을 입력해 주세요">
+                <span>*</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="goods">대출상품</label>
+              </th>
+              <td>
+                <select name="goods" id="goods">
+                  <option selected>원하시는 대출상품을 선택해주세요</option>
+                  <option>직장인신용대출</option>
+                  <option>여성전용 및 주부대출</option>
+                  <option>아파트 신용대출</option>
+                  <option>프리랜서/전문직 대출</option>
+                  <option>개인/법인 사업자대출</option>
+                  <option>부동산/전세계약대출</option>
+                  <option>자동차 담보대출</option>
+                  <option>회생/회복/파산자대출</option>
+                </select>
+              </td>
+            </tr>
+            <tr class="phone">
+              <th>
+                <label for="phone">연락처</label>
+              </th>
+              <td>
+                <input type="text" id="phone" placeholder="'-'를 제외한 숫자만 입력해주세요">
+                <span>*</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <label for="money">신청금액</label>
+              </th>
+              <td class="money_td">
+                <input type="text" id="money"><span>만원</span>
+              </td>
+            </tr>
+            <tr class="service_wrap">
+              <td colspan="2">
+                <div class="service_box">
+                  <span>개인정보 취급방침</span> <button>약관보기</button>
+                  <div class="agree_box">
+                    <input type="checkbox" id="agree">
+                    <label for="agree">동의함</label>
+                  </div>
+                  
+                </div>
+              </td>
+            </tr>
+            <tr class="submit_wrap">
+              <td colspan="2">
+                <button type="submit" class="submitBtn">신청하기</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+    
+  <!-- 상품 section -->
+  <section class="product_section">
+    <div class="inner product_inner">
+      <div class="title_box">
+        <h2>상품안내</h2>
+        <h3>관심있는 상품을 확인해보세요</h3>
+      </div>
+      <div class="product_wrap">
+          <!--product slider -->
+          <div class="product_slider">
+            <i class="prev"></i>
+            <i class="next"></i> 
+            <div class="product_wrapper">
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>직장인 신용대출</h4>
+                    <p>
+                      대한민국 직장인이라면 누구나 연봉, 소득수준, 근무년수에 따라간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 1억원</span></h5>
+                  </div>
+                  <img src="img/product01.png" alt="" class="product01">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>자동차 담보대출</h4>
+                    <p>
+                      차량을 소유한 고객이라면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 7,000만원</span></h5>
+                  </div>
+                  <img src="img/product02.png" alt="" class="product02">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>개인/법인사업자대출</h4>
+                    <p>
+                      사업개시일 3개월 이상인 사업자라면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 1억원</span></h5>
+                  </div>
+                  <img src="img/product03.png" alt="" class="product03">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>아파트 신용대출</h4>
+                    <p>
+                      신용7등급이내 아파트소유자라면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 1억 5천만원</span></h5>
+                  </div>
+                  <img src="img/product04.png" alt="" class="product04">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>프리랜서 신용대출</h4>
+                    <p>
+                      만 20세의 프리랜서라면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 7,000만원</span></h5>
+                  </div>
+                  <img src="img/product05.png" alt="" class="product05">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>여성전용 및 주부대출</h4>
+                    <p>
+                      급여통장 및 소득있는 여성분이라면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>최대 1억원</span></h5>
+                  </div>
+                  <img src="img/product06.png" alt="" class="product06">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>부동산/전세계약대출</h4>
+                    <p>
+                      부동산을 소유하고 있다면 누구나 간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                    <h5>대출 한도 <span>시세의 85%까지</span></h5>
+                  </div>
+                  <img src="img/product07.png" alt="" class="product07">
+                </div>
+              </div>
+              <div class="product">
+                <div class="wrap">
+                  <div class="text_box">
+                    <h4>회생/회복/파산자대출</h4>
+                    <p>
+                      회생, 회복, 파산 상황에서도간편하고 신속하게 대출이 가능합니다.
+                    </p>
+                  </div>
+                  <img src="img/product08.png" alt="" class="product08">
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <a href="productMore.html">
+        <button class="btn red_btn more_btn">
+          <span>자세히보기</span>
+        </button>
+      </a>
+
+      <span class="m_more_btn">
+        <a href="productMore.html">
+          자세히보기 <i class="xi-angle-right-min"></i>
+        </a>
+      </span>
+    </div>
+
+  </section>
+  <!-- product_js -->
+  <script src="js/product.js"></script>
+
+    <!-- 과정 section -->
+    <section class="process" id="process">
+      <div class="inner process_inner">
+        <h2>대출과정</h2>
+        <h3>모바일에서도 편리하게 서비스를 이용하세요</h3>
+        <div class="process_wrap">
+
+          <div class="card request_card" id="request_card">
+            <div class="img_box">
+              <img src="img/icon_request.svg" alt="">
+            </div>
+            <h4>대출신청</h4>
+            <p>PC 또는 모바일에서 간편하게 대출신청합니다</p>
+            <div class="arrow">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="card call_card" id="call_card">
+            <div class="img_box">
+              <img src="img/icon_call.svg" alt="">
+            </div>
+            <h4>대출상담</h4>
+            <p>대출 관련하여 도움을 받습니다</p>
+            <div class="arrow">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="card document_card" id="document_card">
+            <div class="img_box">
+              <img src="img/icon_document.svg" alt="">
+            </div>
+            <h4>서류제출</h4>
+            <p>대출심사를 위한 서류는 인터넷으로 간편 제출합니다</p>
+            <div class="arrow">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="card write_card" id="write_card">
+            <div class="img_box">
+              <img src="img/icon_write.svg" alt="">
+            </div>
+            <h4>계약서 작성</h4>
+            <p>대출 계약 사항에 관련하여 계약서를 작성합니다</p>
+            <div class="arrow">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="card money_card" id="money_card">
+            <div class="img_box">
+              <img src="img/icon_money.svg" alt="">
+            </div>
+            <h4>대출실행</h4>
+            <p>계약서 작성 완료 및 대출 실행합니다</p>
+          </div>
+        </div>
+        <button class="btn blue_btn process_btn">
+          <span>대출신청하기</span> 
+        </button>
+        <span class="m_process_btn">
+          <a href="#none">
+            <!-- 자세히보기 <img src="img/moreBtn.png" alt=""> -->
+            대출신청하기 <i class="xi-angle-right-min"></i>
+          </a>
+        </span>
+      </div>
+    </section>
+  
+  
+  <!-- 배너 section -->
+  <section class="banner">
+    <div class="inner banner_inner">
+      <div class="text_box">
+        <h2>어떤 상품을 고를지 고민이신가요?</h2>
+        <h3>최적화된 대출 상품을 검색해보세요</h3>
+        <a href="#none">맞춤상품찾기 <i class="xi-angle-right-min"></i></a>
+      </div>
+      <div class="img_box"></div>
+    </div>
+  </section>
+
+  <!-- 계약 section -->
+  <section class="contract">
+    <div class="inner contract_inner">
+      <div class="title_box">
+        <h2>전자계약</h2>
+        <h3>지점방문 없는 편리한 전자계약</h3>
+      </div>
+      <div class="contract_wrap">
+        <div class="text_box">
+          <h4>
+            복잡한 단계 없이! <br>
+            누구에게나 쉬운 작성! 쉬운 계약!
+          </h4>
+          <p>
+            범용공인인증서만 있으면 언제 어디에서 바로 계약서 작성까지!<br>
+            전자계약은 모바일앱, PC에서만 지원합니다. 
+          </p>
+          <button class="btn red_btn contract_btn">
+            <span>전자계약하기</span>
+          </button>
+        </div>
+        <div class="img_box"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="m_contract">
+    <div class="inner m_contract_inner">
+      <h2>
+        복잡한 단계 없이<br>
+        누구에게나 쉬운 계약
+      </h2>
+      <p>
+        범용공인인증서만 있으면 <br>
+        지점 방문 없는 편리한 전자계약
+      </p>
+      <span class="m_contract_btn">
+        <a href="#none">
+          전자계약하기 <i class="xi-angle-right-min"></i>
+        </a>
+      </span>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="inner footer_inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/footer_logo.svg" alt="">
+        </a>
+      </div>
+      <div class="call">
+        <p class="call_text">전화문의</p>
+        <p class="call_num">1544 - 9648</p>
+        <p>상담시간 <span>09:00~18:00</span></p>
+        <button>카카오톡 문의<img src="img/icon_kakao.svg" alt=""></button>
+      </div>
+      <div class="brand">
+        <p>
+          상호명 : 금호캐피탈대부/대부중개 <br>
+          브랜드명 : 금호캐피탈 <br>
+          대표자 : 신주옥  <br>
+          대표전화 : 1544-9648  <br>
+          FAX : 02-6008-9648 <br>
+          사업자등록번호 : 130-41-45806
+        </p>
+      </div>
+      <div class="rate">
+        <p>
+          상환기간 : 12개월 ~ 60개월<br>
+          총 대출 비용 예시 : 100만원을 12개월동안 금리 20% 적용하여 원리금균등상환 방법으로 이용하는 경우 <br>
+          총 상환금액 1,111,614원(단,대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.)
+        </p>
+        <p>
+          대출금리 연 20%이내(연체금리 최대 20%이내) <br>
+          단,2021.07.07부터 체결, 갱신, 연장되는 계약에 한함 (연체금리는 약정이자율+3%p 이내 연 20%이내)<br>
+          소정의 채무증명서 발급 비용외 기타부태 비용과 조기상환조건없음.<br>
+          단, 담보대출은 부대비용(근저당설정및 해지비용 등) 및 조기 상환시 조기상환수수료 3% 이내.<br>
+          대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다. <br>
+          중개수수료를 요구하거나 받는 것은 불법입니다. <br>
+          과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.<br>
+          일반금융소비자는 금융판매사업자로부터 충분히 설명을 받을 권리가 있으며, <br>
+          설명 내용을 이해하신 후 계약 및 금융상품체결 전에 금융상품설명서 및 약관을 읽어보시기 바랍니다.
+        </p>
+      </div>
+      <div class="address">
+        <p>
+          주소 : 부산광역시 해운대구 APEC로 17, 센텀리더스마크 2309호(우동) <br>
+          대부업등록번호 :2023-부산해운대구-009 금호캐피탈대부<br>
+          대부중개업등록번호 : 2023-부산해운대구-008  <br>
+          대부중개업등록기관 : 부산광역시 해운대구청(051-749-4474)<br>
+          Copyright 2023. 금호캐피탈. ALL RIGHTS RESERVED
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

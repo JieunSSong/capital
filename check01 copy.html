@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- jquery cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- slick css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <!-- slick js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- xeicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/check01 copy.css">
+  <link rel="stylesheet" href="css/check01Resposive.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="inner header_inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/main_logo.svg" alt="">
+          </a>
+        </div>
+        <i class="xi-angle-left-min"></i>
+        <h1 class="title">한도조회</h1>
+        <div class="right_menu">
+          <a href="index.html">
+            <div class="homeBtn">
+            </div>
+          </a>
+          <div class="mobile_menu"></div>
+        </div>
+
+        <div class="nav">
+          <nav>
+            <ul class="gnb">
+              <li>
+                <a href="#none" class="menulist">금융상품</a>
+                <div class="content_wrap">
+                  <div class="content">
+                    <!-- <ul class="sub_menu"></ul> -->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#none" class="menulist">대출센터</a>
+                <div class="content_wrap">
+                  <div class="content">
+                    <!-- <ul class="sub_menu"></ul> -->
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#none" class="menulist">고객센터 <i class="menu_arrow"></i></a>
+                <div class="content_wrap">
+                  <div class="content">
+                    <ul class="sub_menu">
+                      <li><a href="#none">공지사항</a></li>
+                      <li><a href="#none">FAQ</a></li>
+                      <li><a href="#none">전자민원</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#none" class="menulist">회사소개 <i class="menu_arrow"></i></a>
+                <div class="content_wrap">
+                  <div class="content">
+                    <ul class="sub_menu">
+                      <li><a href="#none">CEO인사말</a></li>
+                      <li><a href="#none">인재채용</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#none" class="menulist">마이페이지 <i class="menu_arrow"></i></a>
+                <div class="content_wrap">
+                  <div class="content">
+                    <ul class="sub_menu">
+                      <li><a href="#none">대출현황</a></li>
+                      <li><a href="#none">회원정보관리</a></li>
+                      <li><a href="#none">서류발급</a></li>
+                      <li><a href="#none">제3자 위임등록</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright">
+              <span>&copy; 금호캐피탈</span>
+          </div>
+          <div class="login_bar">
+            <ul>
+              <li><a href="#none">로그인</a></li>
+              <li><a href="#none">회원가입</a></li>
+              <li class="eng"><a href="#none">ENG</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </header>
+  <div class="nav_bg"></div>
+  <!-- header js -->
+  <script src="js/header.js"></script>
+
+  <!-- navi  -->
+  <section class="navi">
+    <div class="inner navi_inner">
+      <ul>
+        <li><a href="#none">HOME</a> <i class="xi-angle-right-min"></i></li>
+        <li><a href="#none">금융상품</a><i class="xi-angle-right-min"></i></li>
+        <li><a href="#none">개인상품</a><i class="xi-angle-right-min"></i></li>
+        <li><a href="#none">직장인대출</a><i class="xi-angle-right-min"></i></li>
+        <li><a href="#none">한도조회</a></li>
+      </ul>
+      <button class="navBtn">
+        <span>한도조회하기</span>
+      </button>
+    </div>
+  </section>
+  <!-- <div class="button_bg"></div> -->
+
+  <div class="contents active">
+    <div class="inner check01_inner">
+        <aside class="side_bar">
+            <ul>
+                <li class="active">1 <span>약관동의</span></li>
+                <li>2 <span>정보입력</span></li>
+                <li>3 <span>조회결과</span></li>
+            </ul>
+        </aside>
+        <section class="agree_wrap">
+            <!-- <form action=""> -->
+              <h4 class="agree_title">약관동의</h4>
+                <div class="check_list">       
+                    <div class="round all_check">
+                         <input type="checkbox" id="agree_all" name="agree_all">
+                         <label for="agree_all"><span>전체동의</span></label>        
+                    </div>
+                    <div class="round check_box check01">
+                         <input type="checkbox" class="chkControl" id="agree_1" name="agree_1">
+                         <label for="agree_1"><span><strong>(필수)</strong>개인(신용)정보 필수적동의서</span></label>
+                    </div>
+                    <div class="round check_box check02">
+                        <input type="checkbox" class="chkControl" id="agree_2" name="agree_2">
+                        <label for="agree_2"><span><strong>(필수)</strong>공공마이데이터 개인(신용)정보조회 필수적 동의서</span></label>
+                    </div>
+                    <div class="round check_box check03">
+                        <input type="checkbox" class="chkControl" id="agree_3" name="agree_3">
+                        <label for="agree_3"><span>(선택)개인(신용)정보 필수적동의서</span></label>
+                    </div>
+                </div>
+                <button class="nextBtn"><span>다음</span></button>
+            <!-- </form> -->
+            
+            <!-- modal01 -->
+            <div class="agree_modal01">
+              <div class="modal01_wrap">
+                <div class="title_box">
+                  <h3>개인(신용)정보 요약 동의서</h3>
+                  <i class="xi-close-min closeBtn"></i>
+                </div>
+                <div class="agree_box">
+                  <div class="agree_text">
+                    <h2>개인(신용)정보 필수 요약동의서_개인신용대출</h2>
+                    <p>
+                      귀하는 개인신용정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+                      <br><br>
+                      개인(신용)정보의 수집·이용, 조회 및 제공에 관한 동의에서 거래종료일이란 회원탈퇴 또는 채권·채무 관계가 소멸된 날을 말합니다.
+                    </p>
+                    <div class="table_box">
+                      <h3>1. 수집 이용에 관한 사항</h3>
+                      <table>
+                        <tr>
+                          <th>수집·이용 목적</th>
+                          <td>계약의 체결·유지·이행·관리·개선, 신청 상품 서비스 제공, 법령상 의무이행, 신용질서 문란행위 조사, 분쟁처리, 전화상담 업무, 민원처리, 본인 여부 확인</td>
+                        </tr>
+                        <tr>
+                          <th>보유 및 이용기간</th>
+                          <td>
+                            거래종료일로부터 5년<br>
+                            (단, 다른 관련 법령에 해당하는 경우 해당 법령 상의 보존기간을 따름)
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <mark>수집·이용 항목</mark>
+                      <table>
+                        <tr>
+                          <th rowspan="2">고유식별정보(4개)</th>
+                          <td>주민등록번호, 운전면허번호, 여권번호, 외국인등록번호</td>
+                        </tr>
+                        <tr>
+                          <td>위 고유식별정보 수집·이용에 동의하십니까?</td>
+                        </tr>
+                        <tr>
+                          <th>개인(신용)정보(44개)</th>
+                          <td>
+                            <table class="sub_table">
+                              <tr>
+                                <th>일반개인정보(25개)</th>
+                                <th>신용거래정보(5개)</th>
+                                <th>신용도판단정보(2개)</th>
+                                <th>신용능력정보(5개)</th>
+                                <th>공공정보(7개)</th>
+                              </tr>
+                              <tr>
+                                <td>성명, 전화번호 등</td>
+                                <td>대출잔액 등</td>
+                                <td>연체정보 등</td>
+                                <td>소득정보, 재산정보 등</td>
+                                <td>개인신용평점 등</td>
+                              </tr>
+                            </table>
+                            위 개인신용정보 수집·이용에 동의하십니까?
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>스크래핑을 통한 공공정보 등 수집·이용</th>
+                          <td>
+                            [공공기관 전산정보 열람, 발급(스크래핑)을 통한  수집 및 이용]<br>
+                            <ul>
+                              <li>국민건강보험공단 열람 정보 : 건강보험료 등 관련 자료</li>
+                            </ul>
+                            <br>
+                            위 개인신용정보 수집·이용에 동의하십니까?
+                          </td>
+                        </tr>
+                        
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <h3>2. 조회에 관한 사항</h3>
+                      <table>
+                        <tr>
+                          <th>조회 대상 기관(4개)</th>
+                          <td>
+                            종합신용정보집중기관 : 한국신용정보원<br>
+                            신용정보회사 : NICE평가정보(주), 코리아크레딧뷰로(주), 한국기업데이터(주)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>조회 목적</th>
+                          <td>계약의 체결·유지·이행·관리·개선</td>
+                        </tr>
+                        <tr>
+                          <th>조회 동의의 효력기간</th>
+                          <td>
+                            당사의 조회 결과 귀하와의 (금융)거래가 개시되는 경우 해당 (금융)거래종료일까지 동의의 효력이 지속됩니다. 다만, 당사의 조회 결과 귀하가 신청한 (금융)거래의 설정이 거절된 경우에는 그 시점부터 동의의 효력은 소멸합니다.
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <mark>조회 항목</mark>
+                      <table>
+                        <tr>
+                          <th rowspan="2">고유식별정보(2개)</th>
+                          <td>주민등록번호, 외국인등록번호</td>
+                        </tr>
+                        <tr>
+                          <td>위 고유식별정보 수집·이용에 동의하십니까?></td>
+                        </tr>
+                        <tr>
+                          <th rowspan="2">개인(신용)정보(34개)</th>
+                          <td>
+                            <table class="sub_table">
+                              <tr>
+                                <th>일반개인정보(17개)</th>
+                                <th>신용거래정보(3개)</th>
+                                <th>신용도판단정보(2개)</th>
+                                <th>신용능력정보(5개)</th>
+                                <th>공공정보(7개)</th>
+                              </tr>
+                              <tr>
+                                <td>성명, 전화번호 등</td>
+                                <td>여신성거래정보 등</td>
+                                <td>연체정보 등</td>
+                                <td>소득정보, 재산정보 등</td>
+                                <td>개인신용평점 등</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>위 개인신용정보 조회에 동의하십니까?</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <h3>3. 제공에 관한 사항</h3>
+                      <strong>(1) 종합신용정보집중기관 및 신용정보회사에 개인(신용)정보 제공</strong>
+                      <table>
+                        <tr>
+                          <th>제공받는 자 (4개)</th>
+                          <td>
+                            종합신용정보집중기관 : (사)한국신용정보원<br>
+                            신용정보회사 : 나이스평가정보(주), 코리아크레딧뷰로(주), 한국기업데이터(주)
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>제공받는 자의 이용목적</th>
+                          <td>
+                            계약의 체결·유지·이행·관리·개선을 위한 신용조회업무 수행 신용정보의 집중관리 및 활용 등 법령에서 정한 종합신용정보집중기관의 업무 수행 <br>
+                            본인의 신용 판단 및 본인확인 등 법령에서 정한 신용정보회사의 업무 수행
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <mark>제공 항목</mark>
+                      <table>
+                        <tr>
+                          <th rowspan="2">고유식벽정보(2개)</th>
+                          <td>주민등록번호, 외국인등록번호</td>
+                        </tr>
+                        <tr>
+                          <td>위 고유식별정보 제공에 동의하십니까?</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="2">개인(신용)정보(26개)</th>
+                          <td>
+                            <table class="sub_table">
+                              <tr>
+                                <th>일반개인정보(17개)</th>
+                                <th>신용거래정보(3개)</th>
+                                <th>신용도판단정보(2개)</th>
+                                <th>신용능력정보(4개)</th>
+                                <th>공공정보(0개)</th>
+                              </tr>
+                              <tr>
+                                <td>성명, 전화번호 등</td>
+                                <td>여신성거래정보 등</td>
+                                <td>연체정보 등</td>
+                                <td>소득정보, 재산정보 등</td>
+                                <td></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>위 개인신용정보 제공에 동의하십니까?</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <strong>(2) 여신금융협회 등에 개인(신용)정보 제공</strong>
+                      <table>
+                        <tr>
+                          <th>제공받는 자(6개)</th>
+                          <td>여신금융협회, 국세청, 관세청, 행정안전부, 건강보험공단 등</td>
+                        </tr>
+                        <tr>
+                          <th>제공받는자의 이용목적</th>
+                          <td>과세자료의 제출 및 관리에 관한 법률 등 관련 법령에 근거한 의무 이행</td>
+                        </tr>
+                        <tr>
+                          <th>보유 및 이용기간</th>
+                          <td>본 기관이 준수하여야 하는 관련 법령의 보존기간을 따름</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="table_box">
+                      <h3>제공 항목</h3>
+                      <table>
+                        <tr>
+                          <th rowspan="2">고유식별정보(1개)</th>
+                          <td>주민등록번호</td>
+                        </tr>
+                        <tr>
+                          <td>위 고유식별정보 제공에 동의하십니까?</td>
+                        </tr>
+                        <tr>
+                          <th rowspan="2">개인(신용)정보(16개)</th>
+                          <td>
+                            <table class="sub_table">
+                              <tr>
+                                <th>일반개인정보(6개)</th>
+                                <th>신용거래정보(3개)</th>
+                                <th>신용도판단정보(0개)</th>
+                                <th>신용능력정보(7개)</th>
+                                <th>공공정보(0개)</th>
+                              </tr>
+                              <tr>
+                                <td>성명, 전화번호 등</td>
+                                <td>여신성거래정보 등</td>
+                                <td>연체정보 등</td>
+                                <td>소득정보, 재산정보 등</td>
+                                <td></td>
+                              </tr>
+                            </table>
+                          </td>
+  
+                        </tr>
+                        <tr>
+                          <td>위 개인신용정보 제공에 동의하십니까?</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal_footer">
+                  <button class="checkBtn01">
+                    <span>동의</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          
+            <!-- modal02 -->
+            <div class="agree_modal02">
+              <div class="modal02_wrap">
+                <div class="title_box">
+                  <h3>공공 마이데이터 개인(신용)정보 조회 필수적 동의서</h3>
+                  <i class="xi-close-min closeBtn"></i>
+                </div>
+                <div class="agree_box">
+                  <div class="agree_text">
+                    <h2>공공 마이데이터 개인(신용)정보 수집·이용·제공 필수적 동의서</h2>
+                      <p>
+                        금호캐피탈은 행정안전부가 운영하는 공공 마이데이터 유통체계를 통하여 데이터 보유기관(정부·공공기관)에 본인의 개인(신용)정보를 조회하고자 하는 경우에는 '신용정보의 이용 및 보호에 관한 법률', '개인정보보호법', '전자정부법' 등 법령에 따라 본인의 동의가 필요합니다.
+                      </p>
+                        <div class="table_box">
+                          <h3>1. 수집 이용에 관한 사항</h3>
+                          <table class="main_table">
+                            <tr>
+                              <th>수집·이용 목적</th>
+                              <td>
+                                공공 마이데이터 유통체계를 통한 개인(신용)정보 조회, 금융사고 조사·분쟁해결·민원처리, 법령상 의무 이행
+                              </td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">보유 및 이용기간</th>
+                              <td>
+                                거래종료일로부터 5년<br>
+                                  (단, 다른 관련 법령에 해당하는 경우 해당 법령 상의 보존기간을 따름)
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  위 보유 기간에서의 거래 종료일이란 "회원탈퇴 또는 채무·채무 관계가 소멸된 날"을 말한다.
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>거부 권리 및 불이익</th>
+                              <td>
+                                귀하는 개인(신용)정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+                              </td>
+                            </tr>      
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <mark>수집·이용 항목</mark>
+                          <table>
+                            <tr>
+                              <th rowspan="2">고유식별정보(2개)</th>
+                              <td>주민등록번호, 외국인등록번호</td>
+                            </tr>
+                            <tr>
+                              <td>위 고유식별정보 수집·이용에 동의하십니까?</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">개인(신용)정보(12개)</th>
+                              <td>
+                                <table class="sub_table">
+                                  <tr>
+                                    <th>일반개인정보(12개)</th>
+                                    <th>신용거래정보(0개)</th>
+                                    <th>신용도판단정보(0개)</th>
+                                    <th>신용능력정보(0개)</th>
+                                    <th>공공정보(0개)</th>
+                                  </tr>
+                                  <tr>
+                                    <td>성명, 전화번호 등</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>위 개인(신용)정보 수집·이용에 동의하십니까?</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <h3>2. 제공에 관한 사항</h3>
+                          <table>
+                            <tr>
+                              <th>제공받는 자</th>
+                              <td>
+                                공공 마이데이터 유통체계 : 행정안전부<br>
+                                [데이터 보유기관 : 행정안전부, 국민건강보험공단, 국세청, 법무부, 중보벤처기업부, 금융결제원, 국토교통부, 국민연금공단, 공무원연금공단]<br>
+                                중계기관 : 한국신용정보원
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>제공받는 자의 이용목적</th>
+                              <td>
+                                공공 마이데이터 서비스를 통한 개인(신용)정보 조회<br>
+                                데이터 영수증 발급
+                              </td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">보유 및 이용기간</th>
+                              <td>
+                                거래종료일로부터 5년<br>
+                                (단, 다른 관련 법령에 해당하는 경우 해당 법령 상의 보존기간을 따름)
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                위 보유 기간에서의 거래 종료일이란 "회원탈퇴 또는 채권·채무 관계가 소멸된 날"을 말한다.
+                              </td>
+                            </tr>
+                            <tr>
+                              <th>거부 권리 및 불이익</th>
+                              <td>
+                                귀하는 개인(신용)정보 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <mark>제공 항목</mark>
+                          <table>
+                            <tr>
+                              <th rowspan="2">고유식벽정보(2개)</th>
+                              <td>주민등록번호, 외국인등록번호</td>
+                            </tr>
+                            <tr>
+                              <td>위 고유식별정보 제공에 동의하십니까?</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">개인(신용)정보(12개)</th>
+                              <td>
+                                <table class="sub_table">
+                                  <tr>
+                                    <th>일반개인정보(12개)</th>
+                                    <th>신용거래정보(0개)</th>
+                                    <th>신용도판단정보(0개)</th>
+                                    <th>신용능력정보(0개)</th>
+                                    <th>공공정보(0개)</th>
+                                  </tr>
+                                  <tr>
+                                    <td>성명, 전화번호 등</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>위 개인신용정보 제공에 동의하십니까?</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <h3>제3자 제공 및 행정정보 제3자 제공 여부에 관한 사항</h3>
+                          <p>
+                            행정안전부가 운영하는 공공 마이데이터 유통체계를 통하여 데이터 보유기관의 개인(신용)정보를 제공받기 위하여 '신용정보의 이용 및 보호에 관한 법률', '개인정보보호법', '전자정부법' 등 관계 법령에 다라 본인의 동의를 받습니다. <br>
+                            * 데이터 보유기관 : 행정안전부, 국민건강보험공단, 국세청, 법무부, 중소벤처기업부, 금융결제원, 국토교통부, 국민연금공단, 공무원연금공단
+                          </p>
+                          <table>
+                            <tr>
+                              <th>제공받는 자</th>
+                              <td>금호캐피탈</td>
+                            </tr>
+                            <tr>
+                              <th>제공받는자의 이용목적</th>
+                              <td>
+                                금융거래의 설정·유지·이행·관리<br>
+                                금융사고 조사·분쟁해결·민원처리, 법령상 의무 이행
+                              </td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">보유 및 이용기간</th>
+                              <td>
+                                거래종료일로부터 5년<br>
+                                (단, 다른 관련 법령에 해당하는 경우 해당 법령 상의 보존기간을 따름)
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>위 보유 기간에서의 거래 종료일이란 "회원탈퇴 또는 채권·채무 관계가 소멸된 날"을 말한다.</td>
+                            </tr>
+                            <tr>
+                              <th>거부 권리 및 불이익</th>
+                              <td>
+                                귀하는 개인(신용)정보 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다. 
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <mark>제공 항목</mark>
+                          <table>
+                            <tr>
+                              <th rowspan="2">고유식별정보(2개)</th>
+                              <td>주민등록번호, 외국인등록번호</td>
+                            </tr>
+                            <tr>
+                              <td>위 고유식별정보 제공에 동의하십니까?</td>
+                            </tr>
+                            <tr>
+                              <th rowspan="2">개인(신용)정보(31개)</th>
+                              <td>
+                                <table class="sub_table">
+                                  <tr>
+                                    <th>일반개인정보(3개)</th>
+                                    <th>신용거래정보(0개)</th>
+                                    <th>신용도판단정보(0개)</th>
+                                    <th>신용능력정보(0개)</th>
+                                    <th>공공정보(29개)</th>
+                                  </tr>
+                                  <tr>
+                                    <td>성명, ci값, rrn값</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>행정정보</td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>위 개인신용정보 제공에 동의하십니까?</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="table_box">
+                          <mark>제공 요구</mark>
+                          <table>
+                            <tr>
+                              <th class="pg">본인 행정정보 제3자 제공 요구 여부</th>
+                              <td>
+                                전자정부법 제43조의2에 따라 위와 같이 본인정보를 제3자에게 제공하도록 요구하고자 합니다.
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                        <p>
+                          '신용정보의 이용 및 보호에 관한 법률' 제32조에 따라 동일한 목적 또는 이용 범위 내에서 개인(신용)정보의 정확성, 최신성을 유지하기 위해 제공하는 경우에는 개인(신용)정보를 제공받을 때마다 개별적으로 동의를 받지 않아도 됨을 알려드립니다.
+                        </p>
+                  </div>
+                </div>
+                <div class="modal_footer">
+                  <button class="checkBtn01">
+                    <span>동의</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- modal03 -->
+            <div class="agree_modal03">
+              <div class="modal03_wrap">
+                <div class="title_box">
+                  <h3>개인(신용)정보 선택 요약동의서</h3>
+                  <i class="xi-close-min closeBtn"></i>
+                </div>
+                <div class="agree_box">
+                  <div class="agree_text">
+                    <h2>개인(신용)정보 선택 요약동의서</h2>
+                      <p>
+                        개인(신용)정보의 수집·이용 및 제공에 관한 동의에서 거래종료일이란 회원탈퇴 또는 채권·채무 관계가 소멸된 날을 말합니다.
+                      </p>
+                        
+                      <div class="table_box">
+                        <strong>(1) 금융상품 안내 및 이용권유를 위한 수집, 이용</strong>
+                        <h3>1. 수집·이용에 관한 사항</h3>
+                        <table>
+                          <tr>
+                            <th>수집·이용 목적</th>
+                            <td>
+                              금리우대 혜택 제공<br>
+                              귀사 및 제휴사 상품서비스 안내 및 이용권유
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>보유 및 이용기간</th>
+                            <td>거래 종료일 또는 동의 철회시까지</td>
+                          </tr>
+                          <tr>
+                            <th>거부 권리 및 불이익</th>
+                            <td>
+                              귀하는 아래의 개인(신용)정보 수집·이용에 관한 동의를 거부하실 수 있습니다. 다만, 동의하지 않으시는 경우 금융상품과 관련된 상품(서비스)안내 및 이용권유, 금리우대 혜택 제공을 받지 못할 수 있습니다.                                
+                            </td>
+                          </tr>      
+                        </table>
+                      </div>
+                      <div class="table_box">
+                        <mark>수집·이용 항목</mark>
+                        <table>
+                          <tr>
+                            <th rowspan="2">고유식별정보(2개)</th>
+                            <td>주민등록번호, 외국인등록번호</td>
+                          </tr>
+                          <tr>
+                            <td>위 고유식별정보 수집·이용에 동의하십니까?</td>
+                          </tr>
+                          <tr>
+                            <th rowspan="2">개인(신용)정보(39개)</th>
+                            <td>
+                              <table class="sub_table">
+                                <tr>
+                                  <th>일반개인정보(22개)</th>
+                                  <th>신용거래정보(7개)</th>
+                                  <th>신용도판단정보(3개)</th>
+                                  <th>신용능력정보(5개)</th>
+                                  <th>공공정보(2개)</th>
+                                </tr>
+                                <tr>
+                                  <td>성명, 성별 등</td>
+                                  <td>대출상품명 등</td>
+                                  <td>연체일수 등</td>
+                                  <td>직종, 연소득 등</td>
+                                  <td>개인신용평점 등</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>위 개인(신용)정보 수집·이용에 동의하십니까?</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="table_box">
+                        <table>
+                          <tr>
+                            <th>상품서비스 안내</th>
+                            <td>전자적 전송매체를 통한 광고성 정보의 수신을 동의하시겠습니까?</td>
+                          </tr>
+                        </table>
+                      </div>
+                      <p>
+                        * 금융상품 안내 및 이용권유 동의하셨더라도 신용정보의 이용 및 보호에 관한 법률에 따라 이용권유 목적의 연락에 대한 중단을 언제라도 여신회사에 요청할 수 있습니다.
+                      </p>
+                  </div>
+                </div>
+                <div class="modal_footer">
+                  <button class="checkBtn01">
+                    <span>동의</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+        </section>
+    </div>
+  </div>
+
+  <div class="contents">
+    <div class="inner check01_inner">
+        <aside class="side_bar content2_side">
+            <ul>
+                <li class="active">1 <span>약관동의</span></li>
+                <li class="active">2 <span>정보입력</span></li>
+                <li>3 <span>조회결과</span></li>
+            </ul>
+        </aside>
+        <section class="customer_wrap">
+          <div class="input info_input">
+            <label for="info">직업정보</label>
+            <input type="text" name="info" id="info">
+            <i>값을 입력해주세요</i>
+          </div>
+          <div class="input name_input">
+            <label for="name">직장명</label>
+            <input type="text" name="name" id="name"> 
+            <i>값을 입력해주세요</i>
+          </div>
+          <div class="input employment_input">
+            <label for="employment">고용형태</label>
+            <select name="employment" id="employment">
+              <option selected>정규직</option>
+              <option>계약직</option>
+              <option>파견직</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div class="input day_input">
+            <label for="day">입사일시</label>
+            <input type="date" name="day" id="day">
+            <i>값을 입력해주세요</i>
+          </div>
+          <div class="input money_input">
+            <label for="money">연소득</label>
+            <input type="number" name="money" id="money"><span>만원</span>
+            <i>값을 입력해주세요</i>
+          </div>
+          <button type="submit" class="nextBtn2"><span>다음</span></button>
+      </section>
+    </div>
+  </div>
+
+  <div class="wating_modal">
+    <div class="wating_modal_wrap">
+      <h3>한도조회</h3>
+      <p>
+        입력한 정보로 고객님의 한도를 조회중입니다.<br>
+        잠시만 기다려주세요
+      </p>
+      <div class="img_box"></div>
+    </div>
+  </div>
+
+  <div class="contents">
+    <div class="inner check01_inner">
+        <aside class="side_bar content3_side">
+            <ul>
+                <li class="active">1 <span>약관동의</span></li>
+                <li class="active">2 <span>정보입력</span></li>
+                <li class="active">3 <span>조회결과</span></li>
+            </ul>
+        </aside>
+        <section class="finish_wrap">
+          <h2>고객님의 한도조회 결과입니다</h2>
+          <p class="finish_top">
+            보다 정확한 한도를 확인하시려면 대출신청을 클릭해주세요
+          </p>
+          <p class="finish_bottom">
+            궁금한 사항은 1544 - 9648로 전화문의해주세요. <br>
+            (상담가능시간 : 09:00~18:00 / 토,일 공휴일 휴무 )
+          </p>
+          <div class="loan_product">
+            <h3>직장인대출</h3>
+            <div>
+              <h4>한도</h4>
+              <strong>최대 5,000만원</strong>
+            </div>
+            <div>
+              <h4>금리</h4>
+              <strong>12.34%</strong>
+            </div>
+          </div>
+          <div class="pig_img"></div>
+          <button><span>대출신청하기</span></button>
+
+        </section>
+    </div>
+  </div>
+
+  <!-- check.js -->
+  <script src="js/check.js"></script>
+
+    <!-- footer -->
+    <footer>
+      <div class="inner footer_inner">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/footer_logo.svg" alt="">
+          </a>
+        </div>
+        <div class="call">
+          <p class="call_text">전화문의</p>
+          <p class="call_num">1544 - 9648</p>
+          <p>상담시간 <span>09:00~18:00</span></p>
+          <button>카카오톡 문의<img src="img/icon_kakao.svg" alt=""></button>
+        </div>
+        <div class="brand">
+          <p>
+            상호명 : 금호캐피탈대부/대부중개 <br>
+            브랜드명 : 금호캐피탈 <br>
+            대표자 : 신주옥  <br>
+            대표전화 : 1544-9648  <br>
+            FAX : 02-6008-9648 <br>
+            사업자등록번호 : 130-41-45806
+          </p>
+        </div>
+        <div class="rate">
+          <p>
+            상환기간 : 12개월 ~ 60개월<br>
+            총 대출 비용 예시 : 100만원을 12개월동안 금리 20% 적용하여 원리금균등상환 방법으로 이용하는 경우 <br>
+            총 상환금액 1,111,614원(단,대출상품 및 상환방법 등 대출계약 내용에 따라 달라질 수 있습니다.)
+          </p>
+          <p>
+            대출금리 연 20%이내(연체금리 최대 20%이내) <br>
+            단,2021.07.07부터 체결, 갱신, 연장되는 계약에 한함 (연체금리는 약정이자율+3%p 이내 연 20%이내)<br>
+            소정의 채무증명서 발급 비용외 기타부태 비용과 조기상환조건없음.<br>
+            단, 담보대출은 부대비용(근저당설정및 해지비용 등) 및 조기 상환시 조기상환수수료 3% 이내.<br>
+            대출시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다. <br>
+            중개수수료를 요구하거나 받는 것은 불법입니다. <br>
+            과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.<br>
+            일반금융소비자는 금융판매사업자로부터 충분히 설명을 받을 권리가 있으며, <br>
+            설명 내용을 이해하신 후 계약 및 금융상품체결 전에 금융상품설명서 및 약관을 읽어보시기 바랍니다.
+          </p>
+        </div>
+        <div class="address">
+          <p>
+            주소 : 부산광역시 해운대구 APEC로 17, 센텀리더스마크 2309호(우동) <br>
+            대부업등록번호 :2023-부산해운대구-009 금호캐피탈대부<br>
+            대부중개업등록번호 : 2023-부산해운대구-008  <br>
+            대부중개업등록기관 : 부산광역시 해운대구청(051-749-4474)<br>
+            Copyright 2023. 금호캐피탈. ALL RIGHTS RESERVED
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
